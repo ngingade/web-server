@@ -7,7 +7,8 @@ const messageTwo = document.getElementById('message-2');
 const imgTag = document.getElementById('weatherImage');
 
 const fetchLocationDetails = (place) => {
-    fetch(`http://localhost:3000/weather?address=${place}`).then((response) => {
+    // fetch(`http://localhost:3000/weather?address=${place}`).then((response) => {
+    fetch(`/weather?address=${place}`).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 messageOne.innerText = data.error;
