@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+        </div>
+        <div>
+            <p>The latiture is {{ lat }} and Longitude is {{lon}}.</p>
+            <p>{{foreCastData}}</p>
+        </div> 
+        {{>footer}}  
+    </body> 
+</html>
