@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": "18.x",
   "scripts": {
     "start": "node src/app.js"
   },
