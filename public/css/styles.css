@@ -40,3 +40,16 @@ header a {
 .portrait {
     width: 250px;
 }
+
+.input-text {
+    border: 1px solid #888888;
+    height: 26px;
+}
+
+.submit-button {
+    background-color: #888888;
+    height: 30px;
+    border: 1px solid #888888;
+    color: #eeeeee;
+    cursor: pointer;
+}

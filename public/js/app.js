@@ -4,6 +4,7 @@ console.log('Client side javascript file is loaded!');
 
 const messageOne = document.getElementById('message-1');
 const messageTwo = document.getElementById('message-2');
+const messageThree = document.getElementById('message-3');
 const imgTag = document.getElementById('weatherImage');
 
 const fetchLocationDetails = (place) => {
@@ -17,6 +18,7 @@ const fetchLocationDetails = (place) => {
                 console.log(data);
                 messageOne.innerText = data.foreCastData.locateMessage;
                 imgTag.src = data.foreCastData.weather_icons;
+                messageThree.innerText = `The location entered is ${data.foreCastData.location.name} ${data.foreCastData.location.region} ${data.foreCastData.location.country}`
             }
             
         })
@@ -27,6 +29,7 @@ const fetchLocationDetails = (place) => {
 const formInput = document.getElementById('getLocation');
 formInput.addEventListener('submit', (e) => {
     e.preventDefault();
+    messageThree.innerText = '';
     messageOne.innerText = 'Loading...';
     const inputValue = document.getElementById('inputValue').value;
     if(inputValue === '' || !inputValue) {

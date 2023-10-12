@@ -13,8 +13,9 @@ const foreCast = (lat, lon, callBack) => {
             callBack(errorMessage, undefined);
         } else {
             const {weather_descriptions, temperature, feelslike, weather_icons} = (resposnse.body.current);
+            const location = resposnse.body.location;
             const locateMessage =  weather_descriptions + '. It is currently ' + temperature + ' degrees out. It feels like ' + feelslike + ' degrees out.';
-            callBack(undefined, {locateMessage, weather_icons: weather_icons[0]});
+            callBack(undefined, {locateMessage, weather_icons: weather_icons[0], location});
         }
     })
 }
